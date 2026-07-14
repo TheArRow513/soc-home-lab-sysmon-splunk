@@ -89,7 +89,7 @@ With the handler configured and running, start the listener with `exploit`.
 Start an HTTP server using Python on the attack machine so the target machine can download the malware:
 
 ```bash
-python3 -m http.server 80
+python3 -m http.server 9999
 ```
 
 ![Python HTTP server](images/python-http-server.png)
