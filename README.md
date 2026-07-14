@@ -184,7 +184,7 @@ Using Sysmon telemetry collected in Splunk, the following execution chain was re
 explorer.exe (PID 5372)
         │
         ▼
-Resume.pdf.exe (PID 5504)
+Resume.pdf.exe (PID 8112)
         │
         ├──────────────► Outbound TCP Connection
         │                                  192.168.56.107:4444
