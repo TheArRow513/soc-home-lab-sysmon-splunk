@@ -147,7 +147,7 @@ After executing the payload on the Windows VM, Sysmon generated multiple telemet
 The investigation began by reviewing **Sysmon Event ID 1 (Process Creation)**. This indicates that the user manually launched the executable by double-clicking it from Windows Explorer.
 
 ![Sysmon Event ID 1 - process creation](images/sysmon-event1-process-creation.png)
-
+![Explorer_PID](images/explorer_pid.png)
 ### Network Activity
 
 Next, outbound network connections were investigated.
