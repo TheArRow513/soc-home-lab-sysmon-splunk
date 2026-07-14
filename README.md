@@ -116,8 +116,21 @@ The user clicks "Run anyway":
 
 ![SmartScreen warning bypass](images/run-anyway.png)
 
+**10. Verifying the connection**
 
-**10. Confirming the shell on the attacker machine**
+Confirm the connection is established between the target machine and the attacker machine. Run the following in PowerShell and search the output for the malicious process:
+
+```powershell
+netstat -anob
+```
+
+![Netstat output showing established connection](images/netstat-output.png)
+
+The PID is `8112`, so we can look up this PID in Task Manager:
+
+![Task Manager showing PID 8112](images/task-manager-pid.png)
+
+**11. Confirming the shell on the attacker machine**
 
 ![Meterpreter shell established](images/meterpreter-shell.png)
 
