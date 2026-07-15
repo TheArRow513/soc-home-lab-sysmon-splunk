@@ -156,6 +156,18 @@ Next, outbound network connections were investigated.
 
 Using **Sysmon Event ID 3 (Network Connection)**, it was identified that `Resume.pdf.exe` established an outbound TCP connection.
 
+### RDP Connection Attempts
+
+To confirm the RDP exposure identified earlier during the Nmap scan, a search was run to check for connection attempts on port 3389:
+
+```spl
+index="endpoint" dest_port=3389 192.168.56.107 | table _time SourceIp dest_port | sort -_time
+```
+
+![Splunk search showing repeated RDP connection attempts on port 3389](https://claude.ai/chat/images/splunk-rdp-connections.png)
+
+The search confirming multiple connection attempts to the exposed RDP service, all originating from the attacker machine (`192.168.56.107`).
+
 ### Correlating Process and Network Events
 
 To verify that the network activity originated from the executed payload, **Sysmon Event ID 1 (Process Creation)** was correlated with **Event ID 3 (Network Connection)** using the **ProcessGuid**.
