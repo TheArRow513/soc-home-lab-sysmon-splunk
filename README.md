@@ -164,7 +164,7 @@ To confirm the RDP exposure identified earlier during the Nmap scan, a search wa
 index="endpoint" dest_port=3389 192.168.56.107 | table _time SourceIp dest_port | sort -_time
 ```
 
-![Splunk search showing repeated RDP connection attempts on port 3389](https://claude.ai/chat/images/splunk-rdp-connections.png)
+![RDP connection attempts on port 3389](images/RDP.png)
 
 The search confirming multiple connection attempts to the exposed RDP service, all originating from the attacker machine (`192.168.56.107`).
 
